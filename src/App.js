@@ -42,7 +42,7 @@ useEffect(() => {
   setTimeout(() => {
     setRemove(true);
     setToComplete()
-  }, 1600)
+  }, 2000)
 }, [])
 
 const setToComplete = () => {
@@ -76,7 +76,7 @@ const setToComplete = () => {
          <AnimatePresence> 
              {!remove && (
             <motion.div
-             className={`w-full hidden md:block ${remove && 'absolute'}`}
+             className={`w-full hidden md:block ${'absolute'}`}
             initial={{ x: -1000 }}
             animate={{x: 0}}
             exit={{x: -1000}}
@@ -92,11 +92,11 @@ const setToComplete = () => {
          <AnimatePresence> 
              {!remove && (
             <motion.div
-            className={`w-full flex flex-col justify-center items-center md:hidden ${remove && 'absolute'}`}
+            className={`w-full flex flex-col justify-center items-center md:hidden ${!remove && 'absolute'}`}
             initial={{ opacity: 0 }}
             animate={{opacity: 1}}
             exit={{opacity: 0}}
-            transition = {{duration: 1}}
+            transition = {{duration: 2}}
             >
               <h2 className="text-[#F9F9F9] text-3xl leading-normal text-center ">
                   REACT NATIVE
@@ -144,6 +144,21 @@ const setToComplete = () => {
         exit={{opacity: 0}}
         transition={{ duration: 0.3}}
       >
+        <div className="absolute top-32 left-32 px-20 md:px-0 hidden md:block"
+       style={{filter:'blur(10px)'}}
+       >
+         <motion.img src={logo} className={`w-96`} alt="logo" 
+         animate={{rotate: [0, -90]}}
+         transition={{ duration: 1}}
+         />
+         <div className="absolute inset-0 h-full w-full flex justify-center items-center">
+            <img src={nigeria} alt="nigeria" className="w-28"
+              initial={{ opacity: 0 }}
+              animate={{opacity: 1}}
+              transition={{ duration: 1}}
+            />
+         </div>
+       </div>
          <div className="max-w-md py-[64px] px-4 md:px-10 font-bold rounded-2xl modal-color relative">
           <button onClick={toggleModal} className="absolute top-4 left-4 md:left-8">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
