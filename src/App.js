@@ -14,7 +14,7 @@ function App() {
     setTimeout(() => {
       setShowFirst(true);
       hiddingFirst()
-    }, 3000)
+    }, 1000)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -23,7 +23,7 @@ function App() {
       setShowFirst(false);
       showingLast()
       
-    }, 3000)
+    }, 2000)
   }
 
   const showingLast = () => {
