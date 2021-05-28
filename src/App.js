@@ -35,7 +35,7 @@ function App() {
   return (
     <>
     <div className="App h-screen min-h-screen max-h-screen w-screen bg-gradient-to-b from-[#252b2f] to-home-light md:bg-gradient-to-r md:from-[#080D0F] md:via-home-dark md:to-home-light overflow-x-hidden" style={{filter: showModal ? 'blur(16px)' : ""}}>
-       <div className="max-w-screen-xl h-full mx-auto flex items-center px-0 sm:px-6">
+       <div className="max-w-screen-xl h-full mx-auto flex items-start md:items-center mt-20 md:mt-o px-0 sm:px-6">
          <Transition
          className="max-w-4xl mx-auto md:mx-0"
           show={showLast}
