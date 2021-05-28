@@ -13,27 +13,27 @@ function App() {
   const variants = {
     isComplete: {
         x: 0,
-        transition: { duration: 1 }
+        transition: { duration: 1, ease: "easeInOut", type:'tween' }
     },
     notComplete: {
       rotate: [0, 120, 0],
-      transition: { duration: 1 }
+      transition: { duration: 1, ease: "easeInOut", type:'tween' }
     },
     isCompleteMobile: {
         y: 0,
-        transition: { duration: 1 }
+        transition: { duration: 1, ease: "easeInOut", type:'tween' }
     },
     notCompleteMobile: {
       rotate: [0, 120, 0],
-      transition: { duration: 1 }
+      transition: { duration: 1, ease: "easeInOut", type:'tween' }
     },
     visible: {
       animate:{x: 0},
-      transition:{ duration: 1}
+      transition:{ duration: 1, ease: "easeInOut", type:'tween'}
     },
     notVisible:{
       animate:{x: -1000},
-      transition:{ duration: 1}
+      transition:{ duration: 1, ease: "easeInOut", type:'tween'}
     }
     
 }
@@ -61,7 +61,7 @@ const setToComplete = () => {
          <motion.div className="max-w-4xl mx-auto md:mx-0"
          initial={{ x: -1200 }}
             animate={{x: 0}}
-            transition={{ duration: 1, delay: 1}}
+            transition={{ duration: 1.5, ease: "easeInOut", type:'tween'}}
          >
            <h2 className="text-white text-xl md:text-[58px] leading-normal lg:leading-[87px] font-bold text-center lg:text-left">
               Striving to ease the learning <br className="block md:hidden"/>process for any newbie <br className="block md:hidden"/>across <span className="text-[#7FD0FA]">Nigeria </span>
@@ -80,7 +80,7 @@ const setToComplete = () => {
             initial={{ x: -1000 }}
             animate={{x: 0}}
             exit={{x: -1000}}
-            transition = {{duration: 1}}
+            transition = {{duration: 1,}}
             >
               <h2 className="text-[#F9F9F9] text-xl md:text-[64px] leading-normal lg:leading-[87px] text-center lg:text-left">
                   REACT NATIVE
@@ -96,7 +96,7 @@ const setToComplete = () => {
             initial={{ opacity: 0 }}
             animate={{opacity: 1}}
             exit={{opacity: 0}}
-            transition = {{duration: 2}}
+            transition = {{duration: 2, ease: "easeInOut", type:'tween'}}
             >
               <h2 className="text-[#F9F9F9] text-3xl leading-normal text-center ">
                   REACT NATIVE
@@ -117,7 +117,7 @@ const setToComplete = () => {
             <motion.img src={nigeria} alt="nigeria" className="w-12 md:w-auto"
               initial={{ opacity: 0 }}
               animate={{opacity: 1}}
-              transition={{ duration: 1, delay: 1}}
+              transition={{ duration: 2, delay: 1, ease: "easeInOut", type:'tween'}}
             />
          </div>
        </motion.div>
@@ -131,7 +131,7 @@ const setToComplete = () => {
             <motion.img src={nigeria} alt="nigeria" className="w-12 md:w-auto"
               initial={{ opacity: 0 }}
               animate={{opacity: 1}}
-              transition={{ duration: 1, delay: 1}}
+              transition={{ duration: 2, delay: 1, ease: "easeInOut", type:'tween'}}
             />
          </div>
        </motion.div>
@@ -142,14 +142,13 @@ const setToComplete = () => {
         initial={{ opacity: 0 }}
         animate={{opacity: 1}}
         exit={{opacity: 0}}
-        transition={{ duration: 0.3}}
+        transition={{ duration: 0.7}}
       >
-        <div className="absolute top-32 left-32 px-20 md:px-0 hidden md:block"
-       style={{filter:'blur(10px)'}}
+        <div className="absolute top-32 left-32 px-20 md:px-0 hidden md:block opacity-[0.05]"
        >
          <motion.img src={logo} className={`w-96`} alt="logo" 
-         animate={{rotate: [0, -90]}}
-         transition={{ duration: 1}}
+         animate={{rotate: -180}}
+         transition={{ duration: 0.8}}
          />
          <div className="absolute inset-0 h-full w-full flex justify-center items-center">
             <img src={nigeria} alt="nigeria" className="w-28"
